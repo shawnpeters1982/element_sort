@@ -1,7 +1,7 @@
 let img;
 
 function preload() {
-  img = loadImage('https://static.boredpanda.com/blog/wp-content/uploads/2015/08/chemistry-elements-character-design-kcd-studios-6__605.jpg');
+  img = loadImage('hydrogen.png');
 }
 
 function setup() {
