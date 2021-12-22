@@ -76,7 +76,7 @@ function mouseRelease() {
 }
 
 function preload() {
-  img = loadImage('hydrogen.png');
+  img = loadImage('bromine.png');
 }
 
 function setup() {
@@ -89,6 +89,6 @@ function setup() {
 function draw() {
   background(220);
   image(img, 0, 0);
-  console.log(image.width)
+  console.log(image.size)
   
 }
