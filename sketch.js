@@ -37,7 +37,8 @@ class Card {
   }
   
   show() {
-    rect(this.x1,this.y1,this.width,this.height);
+    //rect(this.x1,this.y1,this.width,this.height);
+    image(img, this.x1, this.y1);
   }
 }
 
