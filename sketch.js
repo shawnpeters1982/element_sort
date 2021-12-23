@@ -84,6 +84,7 @@ function preload() {
     img = loadImage(files[i]'.png');
     console.log(img.width, img.height);
     cards.push(new Card(img,i*10,i*10,100,100))
+  }
     
 }
 
