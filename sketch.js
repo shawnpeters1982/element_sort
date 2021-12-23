@@ -4,7 +4,7 @@ let imgs = [];
 let cards = [];
 
 class Card {
-  constructor (x,y,w,h) {
+  constructor (img, x,y,w,h) {
     this.x1 = x;
     this.x2 = x + w;
     this.y1 = y;
@@ -14,6 +14,7 @@ class Card {
     this.active = false;
     this.offsetX = 0;
     this.offsetY = 0;
+    this.img = img
     
   }
   check_click(x,y) {
@@ -40,7 +41,7 @@ class Card {
   
   show() {
     //rect(this.x1,this.y1,this.width,this.height);
-    image(img, this.x1, this.y1);
+    image(this.img, this.x1, this.y1);
   }
 }
 
@@ -81,13 +82,15 @@ function mouseRelease() {
 function preload() {
   for (let i = 0; i < files.length; i++) {
     img = loadImage(files[i]'.png');
-    console.log(img.width, img.height)
+    console.log(img.width, img.height);
+    cards.push(new Card(img,i*10,i*10,100,100))
+    
 }
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
-  for (let i = 0; i < 30; i++) {
-    cards.push(new Card(i*10,i*10,100,100));2
+  //for (let i = 0; i < 30; i++) {
+  //  cards.push(new Card(i*10,i*10,100,100));
   }
 }
 
@@ -97,6 +100,6 @@ function draw() {
     
     cards[i].show()
   }
-  console.log(image.size)
+  
   
 }
