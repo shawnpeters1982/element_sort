@@ -89,7 +89,10 @@ function setup() {
 
 function draw() {
   background(220);
-  image(img, 0, 0);
+  for (let i = 0; i < cards.length; i++) {
+    
+    cards[i].show()
+  }
   console.log(image.size)
   
 }
