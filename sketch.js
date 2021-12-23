@@ -1,4 +1,6 @@
 let img;
+let files = ['bromine','calcium', 'chlorine', 'copper']
+let imgs = [];
 let cards = [];
 
 class Card {
@@ -77,7 +79,9 @@ function mouseRelease() {
 }
 
 function preload() {
-  img = loadImage('bromine.png');
+  for (let i = 0; i < files.length; i++) {
+    img = loadImage(files[i]'.png');
+    console.log(img.width, img.height)
 }
 
 function setup() {
