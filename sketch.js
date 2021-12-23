@@ -92,7 +92,7 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   //for (let i = 0; i < 30; i++) {
   //  cards.push(new Card(i*10,i*10,100,100));
-  }
+  //}
 }
 
 function draw() {
