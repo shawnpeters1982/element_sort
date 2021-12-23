@@ -1,5 +1,5 @@
 let img;
-let files = ['bromine','calcium', 'chlorine', 'copper']
+let files = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine']
 let imgs = [];
 let cards = [];
 
@@ -62,7 +62,7 @@ function mousePressed() {
 
 function mouseDragged() {
   let actived_card = false;
-  for (let i = cards.length-1; i > 0; i--) {
+  for (let i = cards.length-1; i >= 0; i--) {
     if (cards[i].active) {
       if (actived_card) {
         continue;
