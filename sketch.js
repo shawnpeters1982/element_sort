@@ -15,7 +15,7 @@ class Card {
     this.offsetX = 0;
     this.offsetY = 0;
     this.img = img
-    console.log(img.width, img.height);
+    console.log(this.img.width, this.img.height);
   }
   check_click(x,y) {
     
@@ -42,6 +42,7 @@ class Card {
   show() {
     //rect(this.x1,this.y1,this.width,this.height);
     image(this.img, this.x1, this.y1);
+    console.log(this.img.width, this.img.height);
   }
 }
 
