@@ -1,5 +1,5 @@
 let img;
-let files = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine']
+let files = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine', 'iron','lead','magnesium','oxygen']
 let imgs = [];
 let cards = [];
 
@@ -15,7 +15,7 @@ class Card {
     this.offsetX = 0;
     this.offsetY = 0;
     this.img = img
-    
+    console.log(img.width, img.height);
   }
   check_click(x,y) {
     
@@ -82,7 +82,6 @@ function mouseRelease() {
 function preload() {
   for (let i = 0; i < files.length; i++) {
     img = loadImage(files[i]+'.png');
-    console.log(img.width, img.height);
     cards.push(new Card(img,i*10,i*10,100,100))
   }
     
