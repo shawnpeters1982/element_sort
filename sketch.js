@@ -14,8 +14,8 @@ class Card {
     this.active = false;
     this.offsetX = 0;
     this.offsetY = 0;
-    this.img = img
-    console.log(this.img.width, this.img.height);
+    this.img = img;
+    
   }
   check_click(x,y) {
     
@@ -83,8 +83,9 @@ function mouseRelease() {
 function preload() {
   for (let i = 0; i < files.length; i++) {
     img = loadImage(files[i]+'.png');
-    img.resize(120,0);
-    cards.push(new Card(img,i*10,i*10,100,100))
+    //img.resize(120,0);
+    //cards.push(new Card(img,i*10,i*10,100,100))
+    imgs.push(img)
   }
     
 }
@@ -92,9 +93,9 @@ function preload() {
 function setup() {
   createCanvas(displayWidth, displayHeight);
   console.log(displayWidth, displayHeight);
-  //for (let i = 0; i < 30; i++) {
-  //  cards.push(new Card(i*10,i*10,100,100));
-  //}
+  for (let i = 0; i < len(imgs); i++) {
+    cards.push(new Card(imgs[i], i*10,i*10,100,100));
+  }
 }
 
 function draw() {
