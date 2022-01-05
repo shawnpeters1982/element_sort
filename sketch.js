@@ -14,7 +14,7 @@ class Card {
     this.active = false;
     this.offsetX = 0;
     this.offsetY = 0;
-    img.resize(int(displayWidth / 5),0);
+    img.resize(int(displayWidth / 10),0);
     this.img = img;
     
   }
