@@ -72,8 +72,12 @@ function mouseDragged() {
       if (actived_card) {
         continue;
       }
-      cards[i].move(mouseX,mouseY);
+      active_card = cards[i].pop();
+      //cards[i].move(mouseX,mouseY);
+      active_card.move(mouseX,mouseY);
+      cards.push(active_card)
       actived_card = true;
+      
     }
   }
 }
