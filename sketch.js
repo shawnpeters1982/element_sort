@@ -99,9 +99,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(displayWidth, int(displayHeight*0.9));
+  createCanvas(displayWidth, int(displayHeight*0.75));
   button = createButton('Continue');
-  button.position(200, int(displayHeight*0.9));
+  button.position(200, int(displayHeight*0.75));
   for (let i = 0; i < imgs.length; i++) {
     cards.push(new Card(imgs[i], i*10,i*10,100,100));
   }
