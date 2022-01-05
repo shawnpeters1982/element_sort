@@ -75,8 +75,7 @@ function mouseDragged() {
       }
       
       cards[i].move(mouseX,mouseY);
-      active_card = cards.splice(i);
-      cards.push(active_card)
+      cards.push(cards.splice(i, 1)[0]);
       actived_card = true;
       
     }
