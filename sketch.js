@@ -1,6 +1,8 @@
 let img;
-let files = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine', 'iron','lead','magnesium','oxygen']
-let imgs = [];
+let files1 = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine', 'iron','lead','magnesium','oxygen'];
+let files2 = [];
+let imgs1 = [];
+let imgs2 = [];
 let cards = [];
 let button;
 
@@ -89,11 +91,13 @@ function mouseRelease() {
 }
 
 function preload() {
-  for (let i = 0; i < files.length; i++) {
-    img = loadImage(files[i]+'.png');
-    //img.resize(120,0);
-    //cards.push(new Card(img,i*10,i*10,100,100))
-    imgs.push(img)
+  for (let i = 0; i < files1.length; i++) {
+    img = loadImage(files1[i]+'.png');
+    imgs1.push(img)
+  }
+  for (let i = 0; i < files2.length; i++) {
+    img = loadImage(files2[i]+'.png');
+    imgs2.push(img)
   }
     
 }
@@ -101,10 +105,16 @@ function preload() {
 function setup() {
   createCanvas(displayWidth, int(displayHeight*0.75));
   button = createButton('Continue');
+  button.mousePressed(load_metalloids);
+
   button.position(200, int(displayHeight*0.75));
   for (let i = 0; i < imgs.length; i++) {
     cards.push(new Card(imgs[i], i*10,i*10,100,100));
   }
+}
+
+function load_metalloids() {
+  console.log('loading metalloids')
 }
 
 function draw() {
