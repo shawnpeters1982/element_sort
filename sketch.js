@@ -83,6 +83,7 @@ function mouseRelease() {
 function preload() {
   for (let i = 0; i < files.length; i++) {
     img = loadImage(files[i]+'.png');
+    img.resize(120,0);
     cards.push(new Card(img,i*10,i*10,100,100))
   }
     
