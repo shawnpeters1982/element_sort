@@ -93,7 +93,7 @@ function preload() {
 function setup() {
   createCanvas(displayWidth, displayHeight);
   console.log(displayWidth, displayHeight);
-  for (let i = 0; i < len(imgs); i++) {
+  for (let i = 0; i < imgs.length; i++) {
     cards.push(new Card(imgs[i], i*10,i*10,100,100));
   }
 }
