@@ -43,7 +43,7 @@ class Card {
   show() {
     //rect(this.x1,this.y1,this.width,this.height);
     image(this.img, this.x1, this.y1);
-    console.log(this.img.width, this.img.height);
+    
   }
 }
 
