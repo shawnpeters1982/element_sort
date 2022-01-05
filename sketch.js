@@ -14,7 +14,8 @@ class Card {
     this.active = false;
     this.offsetX = 0;
     this.offsetY = 0;
-    this.img = img.resize(120,0);
+    img.resize(120,0);
+    this.img = img;
     
   }
   check_click(x,y) {
