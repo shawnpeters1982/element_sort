@@ -6,15 +6,18 @@ let cards = [];
 class Card {
   constructor (img, x,y,w,h) {
     this.x1 = x;
-    this.x2 = x + w;
+    
     this.y1 = y;
-    this.y2 = y + w;
-    this.height = h;
-    this.width = w;
+    
+    
     this.active = false;
     this.offsetX = 0;
     this.offsetY = 0;
     img.resize(int(displayWidth / 10),0);
+    this.x2 = x + img.width;
+    this.y2 = y + img.height;
+    this.height = img.height;
+    this.width = img.width;
     this.img = img;
     
   }
