@@ -73,9 +73,9 @@ function mouseDragged() {
       if (actived_card) {
         continue;
       }
+      
+      cards[i].move(mouseX,mouseY);
       active_card = cards.splice(i);
-      //cards[i].move(mouseX,mouseY);
-      active_card.move(mouseX,mouseY);
       cards.push(active_card)
       actived_card = true;
       
@@ -100,9 +100,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
-  button = createButton('click me');
-  button.position(200, 200);
+  createCanvas(displayWidth, int(displayHeight*0.9));
+  button = createButton('Continue');
+  button.position(200, int(displayHeight*0.9));
   for (let i = 0; i < imgs.length; i++) {
     cards.push(new Card(imgs[i], i*10,i*10,100,100));
   }
