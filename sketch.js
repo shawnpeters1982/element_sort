@@ -108,8 +108,8 @@ function setup() {
   button.mousePressed(load_metalloids);
 
   button.position(200, int(displayHeight*0.75));
-  for (let i = 0; i < imgs.length; i++) {
-    cards.push(new Card(imgs[i], i*10,i*10,100,100));
+  for (let i = 0; i < imgs1.length; i++) {
+    cards.push(new Card(imgs1[i], i*10,i*10,100,100));
   }
 }
 
