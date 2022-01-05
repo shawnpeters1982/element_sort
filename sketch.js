@@ -2,6 +2,7 @@ let img;
 let files = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine', 'iron','lead','magnesium','oxygen']
 let imgs = [];
 let cards = [];
+let button;
 
 class Card {
   constructor (img, x,y,w,h) {
@@ -72,7 +73,7 @@ function mouseDragged() {
       if (actived_card) {
         continue;
       }
-      active_card = cards[i].pop();
+      active_card = cards.splice(i);
       //cards[i].move(mouseX,mouseY);
       active_card.move(mouseX,mouseY);
       cards.push(active_card)
@@ -100,7 +101,8 @@ function preload() {
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
-  console.log(displayWidth, displayHeight);
+  button = createButton('click me');
+  button.position(200, 200);
   for (let i = 0; i < imgs.length; i++) {
     cards.push(new Card(imgs[i], i*10,i*10,100,100));
   }
