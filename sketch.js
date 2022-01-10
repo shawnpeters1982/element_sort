@@ -106,7 +106,7 @@ function setup() {
     cards.push(new Card(imgs1[i], x_coord, y_coord));
     if (i < 11) {
       x_coord += 100;
-      y_coord += 1;
+      y_coord += 3;
       if (x_coord > displayWidth - 100) {
     
         x_coord = 10;
@@ -114,7 +114,7 @@ function setup() {
       }
     } else {
       x_coord = 10 + (i-10)*10;
-      y_coord = 300 + (i-10);
+      y_coord = 500 + (i-10)*3;
     }
   }
 }
