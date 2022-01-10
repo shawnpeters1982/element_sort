@@ -1,13 +1,13 @@
 let img;
-let files1 = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine', 'iron','lead','magnesium','oxygen'];
-let files2 = [];
+let files1 = ['bromine','calcium', 'chlorine', 'copper', 'fluorine','gold','helium','iodine', 'iron','lead','magnesium','oxygen', 'boron','silicon','germanium','arsenic'];
+//let files2 = [];
 let imgs1 = [];
-let imgs2 = [];
+//let imgs2 = [];
 let cards = [];
 let button;
 
 class Card {
-  constructor (img, x,y,w,h) {
+  constructor (img, x,y) {
     this.x1 = x;
     
     this.y1 = y;
@@ -95,21 +95,20 @@ function preload() {
     img = loadImage(files1[i]+'.png');
     imgs1.push(img)
   }
-  for (let i = 0; i < files2.length; i++) {
-    img = loadImage(files2[i]+'.png');
-    imgs2.push(img)
-  }
     
 }
 
 function setup() {
   createCanvas(displayWidth, int(displayHeight*0.75));
-  button = createButton('Continue');
-  button.mousePressed(load_metalloids);
-
-  button.position(200, int(displayHeight*0.75));
+  x_coord = 10;
+  y_coord = 10;
   for (let i = 0; i < imgs1.length; i++) {
-    cards.push(new Card(imgs1[i], i*10,i*10,100,100));
+    cards.push(new Card(imgs1[i], x_coord, y_coord));
+    x_coord += 100;
+    if (x_coord > displayWidth - 100):
+    {
+      x_coord = 10;
+      y_coord += 50;
   }
 }
 
