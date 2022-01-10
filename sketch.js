@@ -105,10 +105,11 @@ function setup() {
   for (let i = 0; i < imgs1.length; i++) {
     cards.push(new Card(imgs1[i], x_coord, y_coord));
     x_coord += 100;
-    if (x_coord > displayWidth - 100):
-    {
+    if (x_coord > displayWidth - 100) {
+    
       x_coord = 10;
       y_coord += 50;
+    }
   }
 }
 
